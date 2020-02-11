@@ -30,3 +30,4 @@ alias ls="ls --color=auto"
 alias untar='tar -zxvf'
 alias grep='grep --color=auto'
 alias top='top -H' # Show all threads and not just parent processes
+alias diff='diff -y' # Make diff more human-readable by using the side-by-side version
