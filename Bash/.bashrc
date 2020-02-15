@@ -24,6 +24,16 @@ function getPID() {
   ps -e | grep $cmd | awk '{print $1;}'
 }
 
+# Reverts branch based on number of commits given as argument
+# i.e. an argument of 3 would undo the 3 latest commits
+function undoNCommits() {
+  # Takes an argument in the following format:
+  #   undoNCommits <number of commits to undo>
+  hash= $(git log -n $1 pretty=format:"%H" | tail -1)
+  git revert $hash
+
+}
+
 # Helpful aliases
 alias sl="ls --color=auto"
 alias ls="ls --color=auto"
