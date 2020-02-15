@@ -29,7 +29,7 @@ function getPID() {
 function undoNCommits() {
   # Takes an argument in the following format:
   #   undoNCommits <number of commits to undo>
-  hash= $(git log -n $1 pretty=format:"%H" | tail -1)
+  hash= $(git log -n $1 --pretty=format:"%H" | tail -1)
   git revert $hash
 
 }
