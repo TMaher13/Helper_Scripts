@@ -17,5 +17,9 @@ set number
 " Show column and line number
 set ruler
 
-" Set the colorscheme
-colorscheme darkblue
+" Correct formatting for Makefiles
+filetype on
+filetype plugin on
+filetype indent on
+
+autocmd FileType make noexpandtab shiftwidth=8 softtabstop=0
