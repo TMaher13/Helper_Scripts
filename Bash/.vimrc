@@ -22,4 +22,4 @@ filetype on
 filetype plugin on
 filetype indent on
 
-autocmd FileType make noexpandtab shiftwidth=8 softtabstop=0
+autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
